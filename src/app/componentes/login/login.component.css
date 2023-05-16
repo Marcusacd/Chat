@@ -1,3 +1,10 @@
-.titulo{
-    text-align: center;
+.titulo{       
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.campo{
+    width: 30%; margin: -150px auto;
 }
