@@ -9,16 +9,18 @@ import { Component } from '@angular/core';
 
 export class ChatComponent {
 
-  mensagens=[
-    'bem vindo', 
+  mensagens = [
+    'bem vindo',
     'use com sabedoria',
     'boa sorte'
   ]
 
-  
+  mensagem: string = ''
 
-  enviarChat(){
-    alert("Mensagem enviada")
+
+
+  enviarChat() {
+    this.mensagens.push(this.mensagem)
   }
 
 
