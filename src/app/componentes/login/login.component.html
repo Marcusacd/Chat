@@ -2,8 +2,8 @@
 <form method="get" action="">
     <fieldset class="campo">
         <legend>Login:</legend>
-        Nome:<input type="text" id="name" name="nome" size="40" maxlength="35" placeholder="Digite seu nome" autofocus>
+        Nome:<input [(ngModel)]="nome" type="text" id="name" name="nome" size="40" maxlength="35" placeholder="Digite seu nome" autofocus>
         <br><br>       
-        <button routerLink="/chat">Entrar</button>
+        <button routerLink="/chat" (click)="guarda(nome)">Entrar</button>
     </fieldset>
 </form>
