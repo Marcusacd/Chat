@@ -1,3 +1,4 @@
+import { Mensagem } from 'src/app/services/models/mensagem.model';
 import { LocalStorageService } from './../../local-storage.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -10,16 +11,15 @@ import { Component, OnInit } from '@angular/core';
 
 export class ChatComponent implements OnInit{
   
-  mensagens = [
-    'bem vindo',
-    'use com sabedoria',
-    'boa sorte'
+  mensagens: Mensagem[] = [
+    {rementente:'joao', texto:'jashdjkasd'}
   ]
   
   mensagem: string = ''
-   constructor(private localStorageService: LocalStorageService){
 
-   }
+  rementente = this.localStorageService.get('usuario')
+
+  constructor(private localStorageService: LocalStorageService){}
   
   
   
@@ -29,17 +29,13 @@ export class ChatComponent implements OnInit{
 
   
   enviarChat() {
-    this.mensagens.push(this.mensagem)
+    const novaMensagem: Mensagem = new Mensagem;
+    novaMensagem.rementente = this.rementente
+    novaMensagem.texto = this.mensagem
+  
+
+    this.mensagens.push(novaMensagem)
   }
-
-
-
-
-
-
-
-
-
 
 }
 

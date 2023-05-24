@@ -15,7 +15,7 @@ export class LoginComponent {
   
 
   guarda(nome: any){
-    this.localStorageService.set('1', nome)
-    console.log(this.localStorageService.get('1'))
+    this.localStorageService.set('usuario', nome)
+    console.log(this.localStorageService.get('usuario'))
   }
 }
