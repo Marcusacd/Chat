@@ -12,20 +12,14 @@ import { Component, OnInit } from '@angular/core';
 export class ChatComponent implements OnInit{
   
   mensagens: Mensagem[] = [
-    {remetente:'Marcus', texto:'Ola'},
-    {remetente:'Marcus', texto:'Tudo bem?'},
-    {remetente:'Marcus', texto:'Prazer'},
-    {remetente:'Marcus', texto:'Bem Vindo'},
-    {remetente:'Marcus', texto:'VitalSis'}
-    
-    
-  ]  
+    {remetente:'joao', texto:'jashdjkasd'}
+  ]
   
   mensagem: string = ''
-   constructor(private localStorageService: LocalStorageService){
-    
 
-   }
+  rementente = this.localStorageService.get('usuario')
+
+  constructor(private localStorageService: LocalStorageService){}
   
   
   
@@ -35,17 +29,13 @@ export class ChatComponent implements OnInit{
 
   
   enviarChat() {
-    
+    const novaMensagem: Mensagem = new Mensagem;
+    novaMensagem.remetente = this.rementente
+    novaMensagem.texto = this.mensagem
+  
+
+    this.mensagens.push(novaMensagem)
   }
-
-
-
-
-
-
-
-
-
 
 }
 
