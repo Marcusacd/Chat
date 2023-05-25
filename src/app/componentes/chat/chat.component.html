@@ -1,12 +1,11 @@
 <div>
-    <div *ngFor="let msg of mensagens"> 
-        {{ msg.remetente }}:
-        {{ msg.texto }}
-    
-
+    <div class ="painel"  *ngFor="let msg of mensagens"> 
+        <div class="teste">
+            {{ msg.remetente }}: {{ msg.texto }}
+        </div>         
     </div>
 </div>
-<fieldset>
+<fieldset class="msn">
     <legend>Chat:</legend>
     <textarea [(ngModel)]="mensagem" cols=60 id="opiniao" rows="5" name="opiniao" maxlength="500" wrap="hard" placeholder="Digite sua mensagem" autofocus></textarea>
 
