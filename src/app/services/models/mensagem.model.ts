@@ -1,4 +1,4 @@
 export class Mensagem {
-    rementente: string = ''
+    remetente: string = ''
     texto: string = ''
 }
