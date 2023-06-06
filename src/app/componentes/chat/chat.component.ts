@@ -30,13 +30,27 @@ export class ChatComponent implements OnInit{
   
   enviarChat() {
     const novaMensagem: Mensagem = new Mensagem;
-    novaMensagem.remetente = this.remetente
-    novaMensagem.texto = this.mensagem
+    if (this.mensagem === ""){
+      alert('Digite algo')            
+    }else {
+      novaMensagem.texto = this.mensagem
+      novaMensagem.remetente = this.remetente
+      this.mensagens.push(novaMensagem)    
+      this.mensagem = ''
+    }        
+  }  
   
-
-    this.mensagens.push(novaMensagem)
-  }
-
 }
+
+document.addEventListener('keydown', function(e){
+  if(e.key == "Enter"){
+    document.getElementById("send")?.click();    
+  }
+  document.getElementById("textarea")?.focus();
+});
+
+
+
+
 
 

@@ -1,16 +1,26 @@
-/* .painel{
-    text-align: center;
-    background-color: lightgreen;
-} */
-
-.msn{
-    text-align: center;    
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.teste{
-    text-align: center;
-    background-color: lightgreen;
+/* .msn {
+    text-align: center;    
+} */
+
+.text {
     color: black;
-    
+    background-color: white;
+    resize: none;
+}
+
+.teste {
+    text-align: left;
+    color: black;
+    background-color: lightgreen;    
+}
+
+.botao {
+    color: white;
+    background-color: blue;
 }

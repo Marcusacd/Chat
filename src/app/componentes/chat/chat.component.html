@@ -1,14 +1,17 @@
 <div>
     <div class ="painel"  *ngFor="let msg of mensagens"> 
         <div class="teste">
-            {{ msg.remetente }}: {{ msg.texto }}
+            {{ msg.remetente }}:<br> {{ msg.texto }}
         </div>         
     </div>
 </div>
-<fieldset class="msn">
+<!-- <fieldset class="msn"> -->
     <legend>Chat:</legend>
-    <textarea [(ngModel)]="mensagem" cols=60 id="opiniao" rows="5" name="opiniao" maxlength="500" wrap="hard" placeholder="Digite sua mensagem" autofocus></textarea>
+    <textarea class="text" id="textarea" [(ngModel)]="mensagem" cols=60 rows="5" maxlength="500" wrap="hard" placeholder="Digite sua mensagem" required></textarea>
 
-    <button (click)="enviarChat()">Enviar</button>
-</fieldset>
+    <button class="botao" id="send" (click)="enviarChat()" type="button">Enviar</button>
+<!-- </fieldset> -->
+
+
+
 

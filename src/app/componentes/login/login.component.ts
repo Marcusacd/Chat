@@ -14,8 +14,17 @@ export class LoginComponent {
 
   
 
-  guarda(nome: any){
+  guarda(nome: any){   
     this.localStorageService.set('usuario', nome)
-    console.log(this.localStorageService.get('usuario'))
+    console.log(this.localStorageService.get('usuario'))        
   }
 }
+
+document.addEventListener('keydown', function(e){
+  if(e.key == "Enter"){
+    document.getElementById("sendName")?.click();
+  }
+});
+
+
+

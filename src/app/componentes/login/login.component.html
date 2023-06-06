@@ -4,6 +4,6 @@
         <legend>Login:</legend>
         Nome:<input [(ngModel)]="nome" type="text" id="name" name="nome" size="40" maxlength="35" placeholder="Digite seu nome" autofocus>
         <br><br>       
-        <button routerLink="/chat" (click)="guarda(nome)">Entrar</button>
+        <button class="botao" id="sendName" routerLink="/chat" (click)="guarda(nome)" required type="button">Entrar</button>
     </fieldset>
 </form>
